@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300&family=Raleway:wght@400;500;600;700;800&display=swap');
+
+
+
+.header {
+    background-color: #0C70F2;
+    display: flex;
+    font-family: 'Poppins' ;
+    padding-top: 25px;
+    
+    
+
+    &__h1 {
+        font-size: 20px;
+        margin-left: 50px;
+    }
+}
+
+.faixa {
+    background-color:white ;
+    padding: 6px;
+    
+    margin-left: 25px;
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 0;
+    
+
+    
+
+    &__th {
+        color: #0C70F2;
+        font-size: 18px;
+        padding-left: 20px;
+        padding-right: 20px;
+        
+    }
+}
+
+.section {
+    background-color:#2D2D2D;
+    text-align: center;
+    font-family: 'Poppins' ;
+    padding-bottom: 60%;
+    padding-top: 130px;
+    
+    &__h3 {
+        margin-top: 100px;
+        display:flex;
+        justify-content: center; 
+        
+    }
+
+    &__h3__li {
+        margin: 0px 80px 0px 80px ;
+        list-style-type: none;
+    }
+
+}
+
+.corte {
+    border: 3px solid white;
+    width: 35%;
+    margin-left: 468px;
+    margin-top: 40px;
+}
+
+.div {
+
+    // ---------------------------------------------
+
+    &__3 {
+        font-family: 'Raleway';
+        margin-top: 18px;
+        margin-left: 58px;
+    }
+    &__3__button {
+        margin-left: 340px;
+    }
+}
