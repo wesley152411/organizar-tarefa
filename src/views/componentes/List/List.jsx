@@ -1,24 +1,35 @@
-import React, { useState } from 'react'
-import './index.scss'
-import Marcar from '../../../assets/marcar.svg';
-import Lixeira from '../../../assets/lixeira.svg';
-import Editar from '../../../assets/editar.svg';
-import Modal2 from '../Modal2/Modal2';
+import React, { useState } from "react";
+import "./index.scss";
+import Lixeira from "../../../assets/lixeira.svg";
+import Editar from "../../../assets/editar.svg";
+//import ModalEdit from '../Modal-edit/Moda-edit';
 
-export default function List({todo}) {
-    const [openModal, setOpenModal2] = useState(false)
-
-    //onClick={() => setOpenModal2(true)}
+export default function List({
+  todo,
+  setTodoToDelete,
+  setOpenModal2,
+  setOpenModalEdit,
+}) {
   return (
-
-    <div className='div__1'> {todo.text}
-        
-        <img className='div__1__img' src={Marcar} alt="ERROR" />
-        <img className='div__1__img__2' src={Editar}alt="ERROR"/>
-        <img src={Lixeira} alt="ERROR" onClick={() => setOpenModal2(true)} />
-    
-        <Modal2 isOpen2={openModal} setModalOpen2={() => setOpenModal2(!openModal)}/>
-        
+    <div className="list">
+      {" "}
+      {todo.text}
+      <input type="checkbox" className="marcar" />
+      <img
+        src={Editar}
+        alt="ERROR"
+        onClick={() => {
+          setOpenModalEdit(true);
+        }}
+      />
+      <img
+        src={Lixeira}
+        alt="ERROR"
+        onClick={() => {
+          setOpenModal2(true);
+          setTodoToDelete(todo.id);
+        }}
+      />
     </div>
-  )
+  );
 }
