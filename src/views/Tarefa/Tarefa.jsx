@@ -22,6 +22,13 @@ export default function Tarefa() {
     setTodos(filtered);
   };
 
+  const editTodo = (id) => {
+    const edit = todos.find((todo) => todo.id === id);
+    if (edit) {
+      setText(edit.title);
+    }
+  }
+
   return (
     <div>
       {openModal && (
@@ -42,7 +49,9 @@ export default function Tarefa() {
       )}
       {openModalEdit && (
         <>
-          <ModalEdit setEditOpen={() => setOpenModalEdit(!openModalEdit)} />
+          <ModalEdit setEditOpen={() => setOpenModalEdit(!openModalEdit)} 
+              editTodo={editTodo}
+          />
         </>
       )}
       <header className="header">

@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Modal2({ setEditOpen }) {
+export default function Modal2({ setEditOpen, editTodo, setText }) {
   return (
     <div
       style={{
@@ -55,6 +55,7 @@ export default function Modal2({ setEditOpen }) {
         <button
           onClick={() => {
             setEditOpen();
+            editTodo();
           }}
           style={{
             fontFamily: "Poppins",
