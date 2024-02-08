@@ -1,4 +1,4 @@
-export default function Modal2({ 
+export default function ModalEdit({ 
   setEditOpen, 
   editTodo, 
   itemId, 
