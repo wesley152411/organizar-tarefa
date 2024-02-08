@@ -25,7 +25,7 @@ export default function Modal2({ setIsOpen, deleteTodo }) {
                 }}>
                 <div style={{
                     color: 'black',
-                    fontSize:'25px',
+                    fontSize:'150%',
                     marginBottom:'20px',
                     fontFamily:'Poppins',
                     }}>Deseja excluir esse item?</div>
@@ -37,28 +37,29 @@ export default function Modal2({ setIsOpen, deleteTodo }) {
                     setIsOpen();
                 }}                        
                 style={{
-                    fontFamily: 'Poppins',
-                    padding: '8px 45px 8px 45px',
-                    backgroundColor:'#0C70F2',
-                    color:'white', 
-                    borderRadius:'10px', 
-                    fontSize:'20px', 
-                    border:'none', 
-                    cursor:'pointer' 
+                    fontFamily: "Poppins",
+                    padding: "7px 40px",
+                    backgroundColor: "#0C70F2",
+                    color: "white",
+                    borderRadius: "10px",
+                    fontSize: "20px",
+                    marginLeft: "17px",
+                    border: "none",
+                    cursor: "pointer",
                     }} type='submit'>Sim</button>
 
                 <button
                     onClick={() => setIsOpen()} 
                     style={{ 
-                        fontFamily: 'Poppins',
-                        padding: '8px 45px 8px 45px',
-                        backgroundColor:'white',
-                        color:'#0C70F2', 
-                        borderRadius:'10px', 
-                        fontSize:'20px', 
-                        border:'1px solid black ',
-                        marginLeft: '20px', 
-                        cursor:'pointer' 
+                        fontFamily: "Poppins",
+                        padding: "7px 40px",
+                        backgroundColor: "white",
+                        color: "#0C70F2",
+                        borderRadius: "10px",
+                        fontSize: "20px",
+                        border: "1px solid black ",
+                        marginLeft: "26px",
+                        cursor: "pointer",
                     }} 
                     type='submit'
                     >

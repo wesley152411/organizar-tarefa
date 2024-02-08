@@ -3,7 +3,7 @@ import "./index.scss";
 import Modal from "../componentes/Modal/Modal";
 import List from "../componentes/List/List";
 import Modal2 from "../componentes/Modal2/Modal2";
-import ModalEdit from "../componentes/Modal-edit/Moda-edit";
+import ModalEdit from "../componentes/ModalEdit/ModaEdit";
 
 export default function Tarefa() {
   const [openModal, setOpenModal] = useState(false);
@@ -12,6 +12,7 @@ export default function Tarefa() {
   const [todoToDelete, setTodoToDelete] = useState(false);
   const [id, setId] = useState(0);
   const [todos, setTodos] = useState([]);
+  const [editText, setEditText] = useState("");
 
   const addTodo = (todo) => {
     setTodos([...todos, todo]);
@@ -22,12 +23,20 @@ export default function Tarefa() {
     setTodos(filtered);
   };
 
-  const editTodo = (id) => {
-    const edit = todos.find((todo) => todo.id === id);
-    if (edit) {
-      setText(edit.title);
+  const editTodo = (todo) => {
+    let idToReplace = null;
+
+    for (let i = 0; i < todos.length; i++) {
+      if (todos[i].id == todo.id) {
+        idToReplace = todo.id;
+        break;
+      }
     }
-  }
+
+    if (idToReplace != null) {
+      todos[idToReplace].text = editText;
+    }
+  };
 
   return (
     <div>
@@ -47,10 +56,13 @@ export default function Tarefa() {
           />
         </>
       )}
-      {openModalEdit && (
+      {openModalEdit !== null && (
         <>
-          <ModalEdit setEditOpen={() => setOpenModalEdit(!openModalEdit)} 
-              editTodo={editTodo}
+          <ModalEdit 
+          setEditOpen={setOpenModalEdit}
+          editTodo={editTodo}
+          itemId={openModalEdit}
+          setEditText={setEditText}
           />
         </>
       )}
@@ -80,8 +92,8 @@ export default function Tarefa() {
             height: "1px",
             backgroundColor: "white",
             width: "40%",
-            marginLeft: "426px",
-            marginTop: "30px",
+            marginLeft: "30.5%",
+            marginTop: "2%",
           }}
         />
 
@@ -118,4 +130,4 @@ export default function Tarefa() {
       </section>
     </div>
   );
-}
+};

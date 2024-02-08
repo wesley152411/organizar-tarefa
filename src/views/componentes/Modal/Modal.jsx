@@ -36,7 +36,7 @@ export default function Modal({ setModalOpen, addTodo, id, setId }) {
           <input 
             onChange={(e) => setText(e.target.value)}       
             style={{
-              width: '130%',
+              width: '100%',
               transform: 'translate(-15%, -45%)',
               color:'black',
               marginBottom:'8px',
@@ -53,14 +53,15 @@ export default function Modal({ setModalOpen, addTodo, id, setId }) {
             variant="text" 
             onClick={() => todoCreate(text, setModalOpen())}
             style={{ 
-              fontFamily: 'Poppins',
-              padding: '8px 45px 8px 45px',
-              backgroundColor:'#0C70F2',
-              color:'white', 
-              borderRadius:'10px', 
-              fontSize:'20px', 
-              border:'none', 
-              cursor:'pointer' 
+              fontFamily: "Poppins",
+              padding: "7px 40px",
+              backgroundColor: "#0C70F2",
+              color: "white",
+              borderRadius: "10px",
+              fontSize: "20px",
+              marginLeft: "17px",
+              border: "none",
+              cursor: "pointer",
             }}
              type='submit'
           >
@@ -70,14 +71,14 @@ export default function Modal({ setModalOpen, addTodo, id, setId }) {
           <button onClick={setModalOpen} style=
 
           {{ fontFamily: 'Poppins',
-              padding: '8px 45px 8px 45px',
-              backgroundColor:'white',
-              color:'#0C70F2', 
-              borderRadius:'10px', 
-              fontSize:'20px', 
-              border:'1px solid black ',
-              marginLeft: '20px', 
-              cursor:'pointer' 
+              padding: "7px 40px",
+              backgroundColor: "white",
+              color: "#0C70F2",
+              borderRadius: "10px",
+              fontSize: "20px",
+              border: "1px solid black ",
+              marginLeft: "26px",
+              cursor: "pointer",
               }} type='submit'>Não</button>
 
           </div>
